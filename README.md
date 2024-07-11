@@ -1,2 +1,74 @@
-# blitzer_alarm_sg
-Dieses Python-Skript prüft täglich eine Website auf Blitzer-Aktualisierungen und benachrichtigt über Änderungen. Es nutzt Web Scraping, vergleicht aktuelle Daten mit gespeicherten und sendet nur bei neuen/geänderten Einträgen eine Pushover-Benachrichtigung.
+# Blitzer-Warnskript
+
+## Beschreibung
+
+Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktualisierungen von Blitzern und benachrichtigt Benutzer über Änderungen. Es nutzt Web Scraping, um die Informationen zu sammeln, vergleicht die aktuellen Daten mit dem zuvor gespeicherten Zustand und sendet nur dann Benachrichtigungen, wenn neue oder geänderte Einträge vorliegen. Die Benachrichtigungen werden über den Pushover-Dienst gesendet.
+
+## Funktionen
+
+- **Web Scraping**: Extrahiert Blitzer-Daten von einer angegebenen Website.
+- **Zustandsvergleich**: Identifiziert Änderungen durch Vergleich der aktuellen Daten mit dem zuvor gespeicherten Zustand.
+- **Selektive Benachrichtigungen**: Sendet Benachrichtigungen nur bei neuen oder geänderten Einträgen.
+- **Tägliche Ausführung**: Kann mithilfe von Task-Scheduling-Tools wie cron auf Linux oder Task Scheduler auf Windows täglich ausgeführt werden.
+- **Pushover-Integration**: Verwendet Pushover, um Echtzeit-Benachrichtigungen zu senden.
+
+## Voraussetzungen
+
+- Python 3.x
+- Pushover-Konto und API-Schlüssel
+- Python-Pakete: `requests`, `beautifulsoup4`
+
+## Installation
+
+1. **Repository klonen:**
+
+   ```bash
+   git clone https://github.com/yourusername/blitzer-warnskript.git
+   cd blitzer-warnskript
+   ```
+
+2. **Erforderliche Python-Pakete installieren:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Pushover-API-Schlüssel einrichten:**
+   - Ersetzen Sie `YOUR_PUSHOVER_USER_KEY` und `YOUR_PUSHOVER_API_TOKEN` im Skript durch Ihre Pushover-API-Zugangsdaten.
+
+4. **Skript konfigurieren:**
+   - Aktualisieren Sie die Variable `URL_OF_THE_WEBSITE` im Skript mit der URL der gewünschten Website.
+
+## Verwendung
+
+**Manuelle Ausführung:**
+
+```bash
+python blitzer_alarm.py
+```
+
+**Geplante Ausführung:**
+
+1. **Linux (mit cron):**
+
+   ```bash
+   crontab -e
+   ```
+
+   Fügen Sie hinzu:
+
+   ```bash
+   0 6 * * * /usr/bin/python3 /path/to/your/script/check_speed_cameras.py
+   ```
+
+2. **Windows (mit Task Scheduler):**
+   - Erstellen Sie eine neue Aufgabe, legen Sie den Trigger auf täglich fest und setzen Sie die Aktion, um das Python-Skript auszuführen.
+
+## Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe die `LICENSE`-Datei für Details.
+
+## Haftungsausschluss
+
+Bitte beachten Sie, dass die Nutzung dieses Skripts zur Erkennung von Blitzern in einigen Regionen rechtlichen Beschränkungen unterliegen kann. Stellen Sie sicher, dass Sie die örtlichen Gesetze und Vorschriften einhalten.
+
