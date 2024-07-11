@@ -9,7 +9,7 @@ Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktuali
 - **Web Scraping**: Extrahiert Blitzer-Daten von einer angegebenen Website.
 - **Zustandsvergleich**: Identifiziert Änderungen durch Vergleich der aktuellen Daten mit dem zuvor gespeicherten Zustand.
 - **Selektive Benachrichtigungen**: Sendet Benachrichtigungen nur bei neuen oder geänderten Einträgen.
-- **Tägliche Ausführung**: Kann mithilfe von Task-Scheduling-Tools wie cron auf Linux, Task Scheduler auf Windows oder Aufgabenplaner auf einem Synology NAS täglich ausgeführt werden.
+- **Tägliche Ausführung**: Kann mithilfe von Task-Scheduling-Tools wie cron auf Linux, Task Scheduler auf Windows oder Aufgabenplaner auf einem Synology NAS (mehrmals) täglich ausgeführt werden.
 - **Pushover-Integration**: Verwendet Pushover, um Echtzeit-Benachrichtigungen zu senden.
 
 ## Voraussetzungen
