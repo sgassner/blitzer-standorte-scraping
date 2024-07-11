@@ -28,7 +28,7 @@ Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktuali
    - Ersetzen Sie `YOUR_PUSHOVER_USER_KEY` und `YOUR_PUSHOVER_API_TOKEN` im Skript durch Ihre Pushover-API-Zugangsdaten.
 
 4. **Skript konfigurieren:**
-   - Aktualisieren Sie die Variable `URL_OF_THE_WEBSITE` im Skript mit der URL der gewünschten Website.
+   - Aktualisieren Sie die Variable `URL_OF_THE_WEBSITE` im Skript mit der URL der gewünschten Website. Ergänzen Sie unter `PATH_OF_STATE_FILE` den Pfad zur Speicherung der Blitzer-Liste. 
 
 ## Haftungsausschluss
 
