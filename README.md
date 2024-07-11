@@ -29,3 +29,7 @@ Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktuali
 
 4. **Skript konfigurieren:**
    - Aktualisieren Sie die Variable `URL_OF_THE_WEBSITE` im Skript mit der URL der gewünschten Website.
+
+## Haftungsausschluss
+
+Bitte beachten Sie, dass die Nutzung dieses Skripts zur Erkennung von Blitzern in einigen Regionen rechtlichen Beschränkungen unterliegen kann. Stellen Sie sicher, dass Sie die örtlichen Gesetze und Vorschriften einhalten.
