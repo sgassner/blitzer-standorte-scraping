@@ -18,7 +18,4 @@ Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktuali
 - Pushover-Konto und API-Schlüssel
 - Python-Pakete: `requests`, `beautifulsoup4`
 
-## Haftungsausschluss
-
-Bitte beachten Sie, dass die Nutzung dieses Skripts zur Erkennung von Blitzern in einigen Regionen rechtlichen Beschränkungen unterliegen kann. Stellen Sie sicher, dass Sie die örtlichen Gesetze und Vorschriften einhalten.
 
