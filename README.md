@@ -18,4 +18,14 @@ Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktuali
 - Pushover-Konto und API-Schlüssel
 - Python-Pakete: `requests`, `beautifulsoup4`
 
+## Installation
 
+1. **Repository klonen:**
+
+2. **Erforderliche Python-Pakete installieren:**
+
+3. **Pushover-API-Schlüssel einrichten:**
+   - Ersetzen Sie `YOUR_PUSHOVER_USER_KEY` und `YOUR_PUSHOVER_API_TOKEN` im Skript durch Ihre Pushover-API-Zugangsdaten.
+
+4. **Skript konfigurieren:**
+   - Aktualisieren Sie die Variable `URL_OF_THE_WEBSITE` im Skript mit der URL der gewünschten Website.
