@@ -1,4 +1,4 @@
-# Blitzer-Warnskript
+# Web Scraping: Blitzer-Standorte
 
 ## Beschreibung
 
