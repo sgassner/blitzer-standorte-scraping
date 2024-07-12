@@ -1,6 +1,6 @@
 # Web Scraping: Blitzer-Standorte
 
-Dieses Skript wurde entwickelt, um die Standorte von Blitzern im Kanton St. Gallen (SG) und in Liechtenstein (FL) regelmässig zu überprüfen und bei neuen Standorten Benachrichtigungen über den Pushover-Dienst zu senden. Dabei kommen `BeautifulSoup` und `Selenium` zum Einsatz, um die relevanten Daten von statischen und dynamischen Websites zu extrahieren.
+Das Skript identifiziert und meldet automatisch neue Blitzer-Standorte in St. Gallen (SG) und Liechtenstein (FL). Das Projekt nutzt fortgeschrittenes Web Scraping mit `BeautifulSoup` und `Selenium`, um dynamisch geladene Daten präzise zu extrahieren. Die Informationen werden in JSON-Dateien verwaltet und Benachrichtigungen über Pushover versendet.
 
 ## Funktionsweise
 
