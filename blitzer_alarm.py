@@ -50,7 +50,7 @@ def check_blitzer_sg():
 # Funktion zum Abrufen der Blitzer-Daten FL mit Selenium
 def check_blitzer_fl():
     options = Options()
-    options.headless = True  # Führen Sie den Browser im Headless-Modus aus
+    options.headless = True  # Browser im Headless-Modus ausführen
     service = Service(webdriver_path)
     driver = webdriver.Chrome(service=service, options=options)
     
@@ -95,6 +95,7 @@ def send_notification(message, title="Achtung Blitzer!"):
 
 # Hauptlogik
 if __name__ == "__main__":
+    
     # Blitzer-Daten Kanton St. Gallen überprüfen
     current_blitzer_sg = check_blitzer_sg()
     previous_blitzer_sg = load_previous_state(state_file_blitzer_sg)
