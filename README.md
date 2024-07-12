@@ -1,35 +1,25 @@
 # Web Scraping: Blitzer-Standorte
 
-## Beschreibung
+Dieses Skript wurde entwickelt, um die Standorte von Blitzern im Kanton St. Gallen (SG) und in Liechtenstein (FL) regelmässig zu überprüfen und bei neuen Standorten Benachrichtigungen auf ein Handy zu senden. Dabei kommen `BeautifulSoup` und `Selenium` zum Einsatz, um die relevanten Daten von statischen und dynamischen Websites zu extrahieren.
 
-Dieses Python-Skript überprüft täglich eine spezifizierte Website auf Aktualisierungen von Blitzern und benachrichtigt Benutzer über Änderungen. Es nutzt Web Scraping, um die Informationen zu sammeln, vergleicht die aktuellen Daten mit dem zuvor gespeicherten Zustand und sendet nur dann Benachrichtigungen, wenn neue oder geänderte Einträge vorliegen. Die Benachrichtigungen werden über den Pushover-Dienst gesendet.
+## Funktionsweise
 
-## Funktionen
+1. **Datenextraktion für SG**: Mit der Funktion `check_blitzer_sg()` werden die Blitzer-Daten von der offiziellen Website der Blitzerstandorte in St. Gallen abgerufen. Hierbei wird `requests` verwendet, um die HTML-Seite zu laden, und `BeautifulSoup`, um die relevanten Daten aus der HTML-Tabelle zu extrahieren.
 
-- **Web Scraping**: Extrahiert Blitzer-Daten von einer angegebenen Website.
-- **Zustandsvergleich**: Identifiziert Änderungen durch Vergleich der aktuellen Daten mit dem zuvor gespeicherten Zustand.
-- **Selektive Benachrichtigungen**: Sendet Benachrichtigungen nur bei neuen oder geänderten Einträgen.
-- **Tägliche Ausführung**: Kann mithilfe von Task-Scheduling-Tools wie cron auf Linux, Task Scheduler auf Windows oder Aufgabenplaner auf einem Synology NAS (mehrmals) täglich ausgeführt werden.
-- **Pushover-Integration**: Verwendet Pushover, um Echtzeit-Benachrichtigungen zu senden.
+2. **Datenextraktion für FL**: Die Funktion `check_blitzer_fl()` nutzt `Selenium`, um die Blitzer-Daten von der Website der Landespolizei Liechtenstein zu extrahieren. Da diese Seite dynamisch geladen wird, ist der Einsatz eines Headless-Browsers notwendig.
 
-## Voraussetzungen
+3. **Zustandsverwaltung**: Die Funktionen `load_previous_state()` und `save_current_state()` laden bzw. speichern den Zustand der Blitzer-Daten in JSON-Dateien. Dadurch kann das Skript erkennen, ob neue Blitzer-Standorte hinzugekommen sind.
 
-- Python 3.x
-- Pushover-Konto und API-Schlüssel
-- Python-Pakete: `requests`, `beautifulsoup4`
+4. **Benachrichtigungssystem**: Die Funktion `send_notification()` sendet Benachrichtigungen über den Pushover-Dienst, falls neue Blitzer-Standorte identifiziert wurden. 
 
-## Installation
+## Komponenten
 
-1. **Repository klonen:**
+- **BeautifulSoup**: Zum Parsen und Extrahieren von Daten aus HTML.
+- **Selenium**: Zum Interagieren mit dynamisch generierten Webseiten.
+- **requests**: Zum Abrufen von HTML-Seiten.
+- **Pushover**: Zum Senden von Push-Benachrichtigungen.
 
-2. **Erforderliche Python-Pakete installieren:**
+## Verwendung
 
-3. **Pushover-API-Schlüssel einrichten:**
-   - Ersetzen Sie `YOUR_PUSHOVER_USER_KEY` und `YOUR_PUSHOVER_API_TOKEN` im Skript durch Ihre Pushover-API-Zugangsdaten.
-
-4. **Skript konfigurieren:**
-   - Aktualisieren Sie die Variable `URL_OF_THE_WEBSITE` im Skript mit der URL der gewünschten Website. Ergänzen Sie unter `PATH_OF_STATE_FILE` den Pfad zur Speicherung der Blitzer-Liste. 
-
-## Haftungsausschluss
-
-Bitte beachten Sie, dass die Nutzung dieses Skripts zur Erkennung von Blitzern in einigen Regionen rechtlichen Beschränkungen unterliegen kann. Stellen Sie sicher, dass Sie die örtlichen Gesetze und Vorschriften einhalten.
+- **Chromedriver**: Es muss sichergestellt werden, dass der passende Chromedriver für die verwendete Chrome-Version heruntergeladen und der Pfad im Skript korrekt gesetzt ist. Alternativ kann **webdriver-manager** verwendet werden, um den ChromeDriver automatisch zu verwalten.
+- **Benachrichtigung**: Die Platzhalter `pushover_user_key` und `pushover_api_token` müssen individuell angepasst werden.
