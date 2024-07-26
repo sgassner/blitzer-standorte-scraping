@@ -16,6 +16,7 @@ import requests
 from datetime import datetime
 import json
 import os
+import re
 
 # Pfad zum ChromeDriver
 webdriver_path = '/YOUR_PATH/chromedriver'
@@ -68,7 +69,7 @@ def check_blitzer_fl():
     driver.quit()
     
     # Sortiere die Liste nach der Radarnummer
-    blitzer_list_fl.sort(key=lambda entry: int(entry.split()[1]))
+    blitzer_list_fl.sort(key=lambda entry: int(re.search(r'\d+', entry.split()[1]).group()))
     
     return blitzer_list_fl
 
