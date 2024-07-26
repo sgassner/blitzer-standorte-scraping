@@ -50,7 +50,7 @@ def check_blitzer_sg():
 # Funktion zum Abrufen der Blitzer-Daten FL mit Selenium
 def check_blitzer_fl():
     options = Options()
-    options.headless = True  # Browser im Headless-Modus ausführen
+    options.headless = True  # Führen Sie den Browser im Headless-Modus aus
     service = Service(webdriver_path)
     driver = webdriver.Chrome(service=service, options=options)
     
@@ -66,6 +66,10 @@ def check_blitzer_fl():
         blitzer_list_fl.append(f"{radar_title} - {radar_address}")
     
     driver.quit()
+    
+    # Sortiere die Liste nach der Radarnummer
+    blitzer_list_fl.sort(key=lambda entry: int(entry.split()[1]))
+    
     return blitzer_list_fl
 
 # Funktion zum Laden des vorherigen Zustands
