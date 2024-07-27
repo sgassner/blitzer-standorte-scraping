@@ -99,12 +99,11 @@ def send_notification(message, title="Achtung Blitzer!"):
 
 # Hauptlogik
 if __name__ == "__main__":
-    
     # Blitzer-Daten Kanton St. Gallen überprüfen
     current_blitzer_sg = check_blitzer_sg()
     previous_blitzer_sg = load_previous_state(state_file_blitzer_sg)
     
-    new_blitzer_sg = list(set(current_blitzer_sg) - set(previous_blitzer_sg))
+    new_blitzer_sg = [entry for entry in current_blitzer_sg if entry not in previous_blitzer_sg]
     
     if new_blitzer_sg:
         message = f"Neue Blitzer-Standorte (SG) per {datetime.now().strftime('%Y-%m-%d')}:\n" + "\n".join(new_blitzer_sg)
@@ -117,7 +116,7 @@ if __name__ == "__main__":
     current_blitzer_fl = check_blitzer_fl()
     previous_blitzer_fl = load_previous_state(state_file_blitzer_fl)
     
-    new_blitzer_fl = list(set(current_blitzer_fl) - set(previous_blitzer_fl))
+    new_blitzer_fl = [entry for entry in current_blitzer_fl if entry not in previous_blitzer_fl]
     
     if new_blitzer_fl:
         message = f"Neue Blitzer-Standorte (FL) per {datetime.now().strftime('%Y-%m-%d')}:\n" + "\n".join(new_blitzer_fl)
