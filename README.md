@@ -25,6 +25,6 @@ Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gal
   
 - **Chromedriver**: Der Zugriff auf den WebDriver erfolgt über die Remote-URL `http://localhost:4444/wd/hub`. Dadurch entfällt die Notwendigkeit, einen lokalen Chromedriver zu verwalten.
 
-- **Benachrichtigung**: Die Platzhalter `pushover_user_key` und `pushover_api_token` müssen individuell angepasst werden, um Benachrichtigungen zu ermöglichen.
+- **Benachrichtigung**: Die Platzhalter `YOUR_PUSHOVER_USER_KEY` und `YOUR_PUSHOVER_API_TOKEN` müssen individuell angepasst werden, um Benachrichtigungen zu ermöglichen.
 
-- **Zustandsdateien**: Die JSON-Zustandsdateien `state_file_blitzer_sg.json` und `state_file_blitzer_fl.json` beinhalten jeweils die letzten Blitzer-Standorte. Die Platzhalter `PATH` für diese Dateien müssen ebenfalls angepasst werden.
+- **Zustandsdateien**: Die JSON-Zustandsdateien `state_file_blitzer_sg.json` und `state_file_blitzer_fl.json` beinhalten jeweils die letzten Blitzer-Standorte. Die Platzhalter `YOUT_PATH` für diese Dateien müssen ebenfalls angepasst werden.
