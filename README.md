@@ -1,6 +1,6 @@
 # Web Scraping: Blitzer-Standorte
 
-Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gallen (SG) und Liechtenstein (FL) zu identifizieren und zu melden. Das Projekt verwendet fortgeschrittenes Web Scraping mit `BeautifulSoup` und `Selenium`, um sowohl statische als auch dynamisch geladene Daten präzise zu extrahieren. Die Informationen werden in JSON-Dateien verwaltet, und Benachrichtigungen werden über Pushover versendet. Der Zugriff auf dynamisch generierte Webseiten erfolgt über einen Selenium WebDriver, der innerhalb eines Docker-Containers läuft.
+Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gallen (SG) und Liechtenstein (FL) zu identifizieren. Das Projekt verwendet fortgeschrittenes Web Scraping mit `BeautifulSoup` und `Selenium`, um sowohl statische als auch dynamisch geladene Daten präzise zu extrahieren. Die Informationen werden in JSON-Dateien verwaltet, und Benachrichtigungen werden über Pushover versendet. Der Zugriff auf dynamisch generierte Webseiten erfolgt über einen Selenium WebDriver, der innerhalb eines Docker-Containers läuft.
 
 ## Funktionsweise
 
