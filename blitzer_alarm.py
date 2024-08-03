@@ -22,7 +22,7 @@ url_blitzer_fl = "https://www.landespolizei.li/radar"
 state_file_blitzer_sg = "YOUR_PATH" # "/.../state_file_blitzer_sg.json"
 state_file_blitzer_fl = "YOUR_PATH" # "/.../state_file_blitzer_fl.json"
 pushover_user_key = "YOUR_PUSHOVER_USER_KEY" # z. B. "abcde12345fghij67890klmnopqrstu"
-pushover_api_token = "YOUR_PUSHOVER_API_TOKEN" # z. B. "/.../state_file_blitzer_fl.json"
+pushover_api_token = "YOUR_PUSHOVER_API_TOKEN" # z. B. "vwxyz98765abcde43210fghijklmno"
 
 # Funktion zum Abrufen der Blitzer-Daten SG
 def check_blitzer_sg():
