@@ -43,7 +43,7 @@ def check_blitzer_sg():
         if len(columns) >= 3:
             ort = columns[1].text.strip()
             strasse = columns[2].text.strip()
-            blitzer_list_sg.append(f"{ort} - {strasse}")
+            blitzer_list_sg.append(f"{ort} - {strasse}".strip())
     
     return blitzer_list_sg
 
@@ -63,7 +63,7 @@ def check_blitzer_fl():
         radar_address_elem = radar.find_element(By.CLASS_NAME, 'radar-list__item-address')
         radar_title = radar_title_elem.text.strip()
         radar_address = radar_address_elem.text.strip()
-        blitzer_list_fl.append(f"{radar_title} - {radar_address}")
+        blitzer_list_fl.append(f"{radar_title} - {radar_address}".strip())
     
     driver.quit()
     
@@ -75,14 +75,14 @@ def check_blitzer_fl():
 # Funktion zum Laden des vorherigen Zustands
 def load_previous_state(file_path):
     if os.path.exists(file_path):
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             return json.load(file)
     return []
 
 # Funktion zum Speichern des aktuellen Zustands
 def save_current_state(current_state, file_path):
-    with open(file_path, 'w') as file:
-        json.dump(current_state, file)
+    with open(file_path, 'w', encoding='utf-8') as file:
+        json.dump(current_state, file, ensure_ascii=False, indent=4)
 
 # Funktion zum Senden von Benachrichtigungen
 def send_notification(message, title="Achtung Blitzer!"):
