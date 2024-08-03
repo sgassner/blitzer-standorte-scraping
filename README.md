@@ -21,7 +21,7 @@ Dieses Skript wurde konzipiert, um automatisiert neue Blitzer-Standorte in St. G
 
 ## Verwendung
 
-- **Docker-Setup**: Zur lokalen Ausführung des Skripts ist es erforderlich, einen Selenium WebDriver in einem Docker-Container zu betreiben. Docker muss auf dem System installiert sein. Das entsprechende Selenium Docker-Image (z.B. `selenium/standalone-chrome`) kann mit folgendem Befehl gestartet werden:
+- **Docker-Setup**: Zur lokalen Ausführung des Skripts ist es erforderlich, einen Selenium WebDriver in einem Docker-Container zu betreiben. Docker und das entsprechende Selenium Docker-Image (z.B. `selenium/standalone-chrome`) müssen auf dem System installiert und gestartet sein.
   
 - **Chromedriver**: Der Zugriff auf den WebDriver erfolgt über die Remote-URL `http://localhost:4444/wd/hub`. Dies eliminiert die Notwendigkeit, einen lokalen Chromedriver manuell zu verwalten.
 
