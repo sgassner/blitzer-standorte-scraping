@@ -21,12 +21,8 @@ Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gal
 
 ## Verwendung
 
-- **Docker-Setup**: Um das Skript lokal auszuführen, muss ein Selenium WebDriver in einem Docker-Container eingerichtet werden. Docker auf dem System installieren und ein entsprechendes Selenium Docker-Image (z.B. `selenium/standalone-chrome`) starten. Der Container kann mit folgendem Befehl ausgeführt werden:
-
-  ```bash
-  docker run -d -p 4444:4444 --shm-size=2g selenium/standalone-chrome
-  ```
-
+- **Docker-Setup**: Um das Skript lokal auszuführen, muss ein Selenium WebDriver in einem Docker-Container eingerichtet werden. Docker auf dem System installieren und ein entsprechendes Selenium Docker-Image (z.B. `selenium/standalone-chrome`) starten.
+  
 - **Chromedriver**: Der Zugriff auf den WebDriver erfolgt über die Remote-URL `http://localhost:4444/wd/hub`. Dadurch entfällt die Notwendigkeit, einen lokalen Chromedriver zu verwalten.
 
 - **Benachrichtigung**: Die Platzhalter `pushover_user_key` und `pushover_api_token` müssen individuell angepasst werden, um Benachrichtigungen zu ermöglichen.
