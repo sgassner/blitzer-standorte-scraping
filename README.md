@@ -4,9 +4,9 @@ Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gal
 
 ## Funktionsweise
 
-1. **Datenextraktion für SG**: Die Funktion `check_blitzer_sg()` ruft die Blitzer-Daten von der offiziellen Website der Blitzerstandorte in St. Gallen ab. Hierbei wird `requests` verwendet, um die HTML-Seite zu laden, und `BeautifulSoup`, um die relevanten Daten aus der HTML-Tabelle zu extrahieren.
+1. **Datenextraktion für SG**: Die Funktion `check_blitzer_sg()` ruft die Blitzer-Daten von der offiziellen Website der Blitzer-Standorte in St. Gallen ab. Hierbei wird `requests` verwendet, um die HTML-Seite zu laden, und `BeautifulSoup`, um die relevanten Daten aus der HTML-Tabelle zu extrahieren.
 
-2. **Datenextraktion für FL**: Die Funktion `check_blitzer_fl()` nutzt `Selenium`, um die Blitzer-Daten von der offiziellen Website der Blitzerstandorte in Liechtenstein zu extrahieren. Da diese Seite dynamisch geladen wird, ist der Einsatz eines Headless-Browsers notwendig. Der WebDriver läuft innerhalb eines Docker-Containers und kommuniziert über einen Remote-Endpunkt.
+2. **Datenextraktion für FL**: Die Funktion `check_blitzer_fl()` nutzt `Selenium`, um die Blitzer-Daten von der offiziellen Website der Blitzer-Standorte in Liechtenstein zu extrahieren. Da diese Seite dynamisch geladen wird, ist der Einsatz eines Headless-Browsers notwendig. Der WebDriver läuft innerhalb eines Docker-Containers und kommuniziert über einen Remote-Endpunkt.
 
 3. **Zustandsverwaltung**: Die Funktionen `load_previous_state()` und `save_current_state()` laden bzw. speichern den Zustand der Blitzer-Daten in JSON-Dateien. Dadurch kann das Skript erkennen, ob neue Blitzer-Standorte hinzugekommen sind.
 
@@ -27,4 +27,4 @@ Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gal
 
 - **Benachrichtigung**: Die Platzhalter `pushover_user_key` und `pushover_api_token` müssen individuell angepasst werden, um Benachrichtigungen zu ermöglichen.
 
-- **Zustandsdateien**: Die JSON-Zustandsdateien `state_file_blitzer_sg.json` und `state_file_blitzer_fl.json` beinhalten jeweils die letzten Blitzerstandorte. Die Platzhalter `PATH` für diese Dateien müssen ebenfalls angepasst werden.
+- **Zustandsdateien**: Die JSON-Zustandsdateien `state_file_blitzer_sg.json` und `state_file_blitzer_fl.json` beinhalten jeweils die letzten Blitzer-Standorte. Die Platzhalter `PATH` für diese Dateien müssen ebenfalls angepasst werden.
