@@ -27,4 +27,4 @@ Dieses Skript wurde entwickelt, um automatisch neue Blitzer-Standorte in St. Gal
 
 - **Benachrichtigung**: Die Platzhalter `pushover_user_key` und `pushover_api_token` müssen individuell angepasst werden, um Benachrichtigungen zu ermöglichen.
 
-- **Konfigurationsdateien**: Die JSON-Zustandsdateien `state_file_blitzer_sg.json` und `state_file_blitzer_fl.json` werden im Verzeichnis des Skripts gespeichert, um den aktuellen Stand der Blitzer-Daten zu verfolgen.
+- **Zustandsdateien**: Die JSON-Zustandsdateien `state_file_blitzer_sg.json` und `state_file_blitzer_fl.json` beinhalten jeweils die letzten Blitzerstandorte. Die Platzhalter `PATH` für diese Dateien müssen ebenfalls angepasst werden.
