@@ -19,10 +19,10 @@ import os
 # Pfade und URLs
 url_blitzer_sg = "https://www.sg.ch/sicherheit/kantonspolizei/verkehr/radar.html"
 url_blitzer_fl = "https://www.landespolizei.li/radar"
-state_file_blitzer_sg = "PATH"
-state_file_blitzer_fl = "PATH"
-pushover_user_key = "pushover_user_key"
-pushover_api_token = "pushover_api_token"
+state_file_blitzer_sg = "YOUR_PATH" # "/.../state_file_blitzer_sg.json"
+state_file_blitzer_fl = "YOUR_PATH" # "/.../state_file_blitzer_fl.json"
+pushover_user_key = "YOUR_PUSHOVER_USER_KEY" # z. B. "abcde12345fghij67890klmnopqrstu"
+pushover_api_token = "YOUR_PUSHOVER_API_TOKEN" # z. B. "/.../state_file_blitzer_fl.json"
 
 # Funktion zum Abrufen der Blitzer-Daten SG
 def check_blitzer_sg():
