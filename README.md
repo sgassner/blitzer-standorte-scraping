@@ -6,7 +6,7 @@ Dieses Skript wurde konzipiert, um automatisiert neue Blitzer-Standorte in St. G
 
 1. **Datenextraktion für SG**: Die Funktion `check_blitzer_sg()` dient zur Extraktion der Blitzer-Daten von der offiziellen Website der Blitzer-Standorte in St. Gallen. Die Bibliothek `requests` wird eingesetzt, um die HTML-Seite zu laden, während `BeautifulSoup` die relevanten Informationen aus den HTML-Tabellenstrukturen extrahiert.
 
-2. **Datenextraktion für FL**: Für die dynamische Datenextraktion auf der Website der Landespolizei Liechtenstein wird `Selenium` verwendet. Da die Seite interaktive Elemente enthält, wird ein Headless-Browser eingesetzt. Der WebDriver operiert innerhalb eines Docker-Containers und kommuniziert über einen Remote-Endpunkt mit der Anwendung.
+2. **Datenextraktion für FL**: Für die dynamische Datenextraktion von der offiziellen Website der Blitzer-Standorte in Liechtenstein wird `Selenium` verwendet. Da die Seite interaktive Elemente enthält, wird ein Headless-Browser eingesetzt. Der WebDriver operiert innerhalb eines Docker-Containers und kommuniziert über einen Remote-Endpunkt mit der Anwendung.
 
 3. **Zustandsverwaltung**: Mittels der Funktionen `load_previous_state()` und `save_current_state()` werden die aktuellen Zustände der Blitzer-Daten in JSON-Dateien gespeichert und geladen. Diese Mechanismen ermöglichen es dem Skript, Veränderungen in den Blitzer-Standorten zuverlässig zu erkennen.
 
